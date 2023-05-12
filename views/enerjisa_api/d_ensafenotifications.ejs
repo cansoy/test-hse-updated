@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnsafeNotificationsAPI</title>
+</head>
+<body>
+    
+    <br><br>
+        <% if (locals.dbConnectionError) { %>
+            <hr>
+                <p id="dbConnection"><%= locals.dbConnectionError %> </p>
+            <hr>
+        <% } %>
+        <% if (locals.ensafeNotificationsSavedSuccessfully) { %>
+            <hr>
+                <p id="savedSuccessfully"><%= locals.ensafeNotificationsSavedSuccessfully %> </p>
+            <hr>
+        <% } %>
+        <% if (locals.ensafeNotificationsCouldntSave) { %>
+            <hr>
+                <p id="couldntSave"><%= locals.ensafeNotificationsCouldntSave %> </p>
+            <hr>
+        <% } %>
+    <br><br>
+    <hr>
+    <form action="/enerjisaapi/ensafenotifications" method="post">
+        <div>
+            <textarea name="ensafenotificationsapi" id="ensafenotificationsapi" cols="150" rows="10"></textarea>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <input type="submit" name="submit" id="submit" value ="ENSAFE NOTIFICATIONS"></input>
+        </div>
+        <br>
+        <hr>
+    </form>
+    <br><br>
+
+</body>
+</html>

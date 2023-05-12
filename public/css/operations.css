@@ -1,0 +1,357 @@
+
+@import 'https://fonts.googleapis.com/css?family=Lato:900';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css';
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+    border-radius: 4px;
+  }
+html,
+body {
+    min-height: 100%;
+    }
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body{
+    background: #eee;
+    background: linear-gradient(270deg, rgba(0, 0, 200, 0.1) , rgba(0, 0, 200, 0) );
+}
+nav{
+    margin: 1rem;
+}
+.my-container-head{
+    margin: 0.4rem;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:stretch;
+}
+.shift-trace-person-info-head,
+.shift-trace-work-info-head,
+.shift-trace-location-info-head,
+.ensafe-audits-info-head,
+.ensafe-events-info-head,
+.ensafe-notification-info-head,
+.sap-wfm0004-info-head,
+.tedsuit-info-head,
+.audit-form-head{
+    margin: 0.15rem;
+    padding: 0.15rem;
+    border: 1px solid black;
+    background-color: #F1948A;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.shift-trace-person-info-head{
+    width: 12rem;
+ } 
+.shift-trace-work-info-head{
+    width: 23rem;
+ } 
+ .shift-trace-location-info-head{
+    width: 12rem;
+ } 
+.ensafe-audits-info-head,
+.ensafe-events-info-head,
+.ensafe-notification-info-head,
+.tedsuit-info-head,
+.audit-form{
+    width: 10rem;
+}
+.sap-wfm0004-info-head{
+    width: 7rem;
+}
+
+.my-row{
+    margin: 0.4rem;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:stretch
+}
+.shift-trace-person-info,
+.shift-trace-work-info,
+.shift-trace-location-info,
+.ensafe-audits-info,
+.ensafe-events-info,
+.ensafe-notification-info,
+.sap-wfm0004-info,
+.tedsuit-info,
+.audit-form{
+    margin: 0.15rem;
+    padding: 0.15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    perspective: 1000px;
+    background: linear-gradient(to bottom right, #e0f1f1, #638697);
+    color: black;
+}
+
+.shift-trace-person-info{
+    width: 12rem;
+    font-size: 0.8rem;
+ } 
+.shift-trace-work-info{
+    width: 23rem;
+    font-size: 0.8rem;
+ } 
+ .shift-trace-location-info>.location-details{
+    width: 12rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 0.8rem;
+ } 
+.ensafe-audits-info,
+.ensafe-events-info,
+.ensafe-notification-info,
+.tedsuit-info,
+.audit-form{
+    width: 10rem;
+}
+.sap-wfm0004-info{
+    width: 7rem;
+}
+.shift-trace-person-info:hover,
+.shift-trace-work-info:hover,
+.shift-trace-location-info:hover,
+.ensafe-audits-info:hover,
+.ensafe-events-info:hover,
+.ensafe-notification-info:hover,
+.sap-wfm0004-info:hover,
+.tedsuit-info:hover,
+.audit-form:hover{
+    cursor: pointer;
+}
+img{
+    margin: 0.2rem;
+    padding: 0.2rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+.audits-summary-info-withactionaudits,
+.audits-summary-info-totalaudits,
+.events-summary-info-totalevents,
+.notifications-summary-info-totalnotifications,
+.sapwfm-summary-info-totalsapwfm,
+.tedsuit-summary-info-totaltedsuit
+{
+    border-bottom: 0.1rem solid black;
+    font-size: 0.8rem;
+}
+a,a:link,a:visited,a:hover,a:active {
+    text-decoration: none;
+}
+.back-home-href>img{
+    margin: 0rem;
+    padding: 0rem;
+    width: 1.5rem;
+    height:1rem;
+    cursor: pointer;
+}
+.icon-tedsuitwatch{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.icon-tedsuitwatch-warn{
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: white;
+}
+@media screen and (min-width: 300px) and (max-width: 786px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#F4F6F6;
+        position: relative;
+    }
+    nav{
+        margin: 0.1rem;
+    }
+    .back-home-href{
+        font-size: 0.4rem;
+    }
+    .my-container-head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:stretch;
+        position: relative;
+    }
+    .shift-trace-person-info-head,
+    .shift-trace-work-info-head,
+    .shift-trace-location-info-head,
+    .ensafe-audits-info-head,
+    .ensafe-events-info-head,
+    .ensafe-notification-info-head,
+    .sap-wfm0004-info-head,
+    .tedsuit-info-head,
+    .audit-form-head{
+        margin: 0.1rem;
+        padding: 0.1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.2rem;
+    }
+    .shift-trace-person-info-head{
+        width: 2rem;
+    } 
+    .shift-trace-work-info-head{
+        width: 4rem;
+    } 
+    .shift-trace-location-info-head{
+        width: 2.7rem;
+    } 
+    .ensafe-audits-info-head,
+    .ensafe-events-info-head,
+    .ensafe-notification-info-head,
+    .tedsuit-info-head{
+        width: 2.2rem;
+    }
+    .audit-form{
+        width: 1.7rem;
+    }
+    .sap-wfm0004-info-head{
+        width: 1rem;
+    }
+    .my-row{
+        margin: 0.1rem;
+        padding: 0.1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:stretch
+    }
+    .shift-trace-person-info,
+    .shift-trace-work-info,
+    .shift-trace-location-info,
+    .ensafe-audits-info,
+    .ensafe-events-info,
+    .ensafe-notification-info,
+    .sap-wfm0004-info,
+    .tedsuit-info,
+    .audit-form{
+        margin: 0.1rem;
+        padding: 0.1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+        background: linear-gradient(to bottom right, #e0f1f1, #638697);
+    }
+    .shift-trace-person-info{
+        padding:0.01rem;
+        width: 2rem;
+        font-size: 0.3rem;
+     } 
+    .shift-trace-work-info{
+        width: 4rem;
+        font-size: 0.3rem;
+     } 
+     .shift-trace-location-info>.location-details{
+        width: 2.7rem;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+        font-size: 0.3rem;
+     } 
+    .ensafe-audits-info,
+    .ensafe-events-info,
+    .ensafe-notification-info,
+    .tedsuit-info
+    {
+        width: 2.2rem;
+    }
+    .audit-form{
+        width: 1.5rem;
+    }
+    .sap-wfm0004-info{
+        width: 1rem;
+    }
+    .sap-wfm0004-info div{
+       font-size: 0rem;
+    }
+    .shift-trace-person-info:hover,
+    .shift-trace-work-info:hover,
+    .shift-trace-location-info:hover,
+    .ensafe-audits-info:hover,
+    .ensafe-events-info:hover,
+    .ensafe-notification-info:hover,
+    .sap-wfm0004-info:hover,
+    .tedsuit-info:hover,
+    .audit-form:hover{
+        background-color: #E6B0AA;
+        cursor: pointer;
+    }
+    img{
+        margin: 0rem;
+        padding: 0rem;
+        width: 1rem;
+        height:1rem;
+        cursor: pointer;
+    }
+    .audits-summary-info-withactionaudits,
+    .audits-summary-info-totalaudits,
+    .events-summary-info-totalevents,
+    .notifications-summary-info-totalnotifications,
+    .sapwfm-summary-info-totalsapwfm,
+    .tedsuit-summary-info-totaltedsuit
+    {
+        border-bottom: 0.1rem solid black;
+        font-size: 0.3rem;
+    }
+    a,a:link,a:visited,a:hover,a:active {
+        text-decoration: none;
+    }
+    .back-home-href>img{
+        margin: 0rem;
+        padding: 0rem;
+        width: 1rem;
+        height:0.8rem;
+        cursor: pointer;
+    }
+    .icon-tedsuitwatch{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    .icon-tedsuitwatch-warn{
+        width: 0.3rem;
+        height: 0.3rem;
+        background-color: white;
+    }
+}

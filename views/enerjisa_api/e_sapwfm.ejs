@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SapWfmAPI</title>
+</head>
+<body>
+    
+    <br><br>
+        <% if (locals.dbConnectionError) { %>
+            <hr>
+                <p id="dbConnection"><%= locals.dbConnectionError %> </p>
+            <hr>
+        <% } %>
+        <% if (locals.sapWfmSavedSuccessfully) { %>
+            <hr>
+                <p id="savedSuccessfully"><%= locals.sapWfmSavedSuccessfully %> </p>
+            <hr>
+        <% } %>
+        <% if (locals.sapWfmCouldntSave) { %>
+            <hr>
+                <p id="couldntSave"><%= locals.sapWfmCouldntSave %> </p>
+            <hr>
+        <% } %>
+    <br><br>
+    <hr>
+    <form action="/enerjisaapi/sapwfm" method="post">
+        <div>
+            <textarea name="sapwfmapi" id="sapwfmapi" cols="150" rows="10"></textarea>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <input type="submit" name="submit" id="submit" value ="SAP WFM"></input>
+        </div>
+        <br>
+        <hr>
+    </form>
+    <br><br>
+
+</body>
+</html>

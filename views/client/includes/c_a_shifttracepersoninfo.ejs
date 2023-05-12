@@ -1,0 +1,14 @@
+<% let progresRandom=Math.floor(Math.random()*60+5)  %>
+<% let progresRandomWidth=`width:${progresRandom}%;` %>
+
+<div class="icon-person">
+    <div class="person-success-border">
+        <div class="person-success-border-progress" data-progres-bar="<%= progresRandom%>" style='<%= progresRandomWidth %>'></div>
+    </div>
+    <img src="../../svg/person.svg" data-worker-id="<%= data.VAR_SICIL.trim()%>">
+</div>
+<div class="name-person" data-worker-id="<%= data.VAR_SICIL.trim()%>">
+    <%= data.VAR_ADI_SOYAD%>
+</div>
+
+

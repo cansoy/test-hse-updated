@@ -1,0 +1,66 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0.1rem;
+    padding: 0.1rem;
+    width: 99vw;
+    height: 99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.root{
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.show-dashbord{
+    margin: 0.1rem;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(197, 214, 213);
+}
+.show-dashbord-img{
+    width: max-content;
+    height: max-content;
+    object-fit: contain
+}
+.fill-form{
+    margin: 0.1rem;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(203, 197, 214);
+}
+.fill-form-img{
+    width: max-content;
+    height: max-content;
+    object-fit: contain
+}
+.google-map{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-map img{
+    width: 90%;
+    height: 90%
+}

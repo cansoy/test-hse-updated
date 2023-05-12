@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TedSuitUnsuitablesAPI</title>
+</head>
+<body>
+    <br><br>
+        <% if (locals.dbConnectionError) { %>
+            <hr>
+                <p id="dbConnection"><%= locals.dbConnectionError %> </p>
+            <hr>
+        <% } %>
+        <% if (locals.tedsuitUnsuitablesSavedSuccessfully) { %>
+            <hr>
+                <p id="savedSuccessfully"><%= locals.tedsuitUnsuitablesSavedSuccessfully %> </p>
+            <hr>
+        <% } %>
+        <% if (locals.tedsuitUnsuitablesCouldntSave) { %>
+            <hr>
+                <p id="couldntSave"><%= locals.tedsuitUnsuitablesCouldntSave %> </p>
+            <hr>
+        <% } %>
+    <br><br>
+    <hr>
+    <form action="/enerjisaapi/tedsuitunsuitables" method="post">
+        <div>
+            <textarea name="tedsuitunsuitablesapi" id="tedsuitunsuitablesapi" cols="150" rows="10"></textarea>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <input type="submit" name="submit" id="submit" value ="TED SUIT UNSUITABLE"></input>
+        </div>
+        <br>
+        <hr>
+    </form>
+    <br><br>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<div class="icon-tedsuit" data-tedsuit-workerid="<%= data.VAR_SICIL.trim()%>" data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+    <img src="../../svg/tedsuit.svg" data-tedsuit-workerid="<%= data.VAR_SICIL.trim()%>">
+</div>
+<% let counterMain=0 %> 
+<% let counterUnsitables=0 %> 
+
+<div class="tedsuit-summary-info">
+    <% tedsuitMaindata.forEach(tedsuitmain => { %>
+        <% if (data.VAR_SICIL==tedsuitmain.workerId) { %>
+            <% ++counterMain%> 
+        <% } %>
+    <% }) %>
+
+    <% tedsuitUnsuitableData.forEach((tedsuit) => { %>
+        <% if (data.VAR_SICIL==tedsuit.workerId) { %>
+            <% ++counterUnsitables%> 
+        <% } %>
+    <% }) %>
+     
+    <div class="tedsuit-summary-info-totaltedsuit" data-tedsuit-workerid="<%= data.VAR_SICIL.trim()%>">
+        <div class="total-orders">TOPLAM: <%= Math.floor(Math.random()*70+4) %></div>
+        <% if (counterUnsitables>0 && counterMain>=0) { %>
+            <p data-tedsuit-workerid="<%= data.VAR_SICIL.trim()%>">UYGUNSUZ:<%= counterUnsitables%></p>
+        <% } %>
+        <% if (counterUnsitables==0 && counterMain>0) { %>
+            <img class="icon-tedsuitwatch" src="../../svg/tedsuitwatch.svg" alt="" data-tedsuit-workerid="<%= data.VAR_SICIL.trim()%>">
+        <% } %>
+     </div>
+</div>

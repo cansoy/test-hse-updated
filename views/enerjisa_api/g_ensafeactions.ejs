@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnsafeActionsAPI</title>
+</head>
+<body>
+    
+    <br><br>
+        <% if (locals.dbConnectionError) { %>
+            <hr>
+                <p id="dbConnection"><%= locals.dbConnectionError %> </p>
+            <hr>
+        <% } %>
+        <% if (locals.ensafeActionsSavedSuccessfully) { %>
+            <hr>
+                <p id="savedSuccessfully"><%= locals.ensafeActionsSavedSuccessfully %> </p>
+            <hr>
+        <% } %>
+        <% if (locals.ensafeActionsCouldntSave) { %>
+            <hr>
+                <p id="couldntSave"><%= locals.ensafeActionsCouldntSave %> </p>
+            <hr>
+        <% } %>
+    <br><br>
+    <hr>
+    <form action="/enerjisaapi/ensafeactions" method="post">
+        <div>
+            <textarea name="ensafeactionsapi" id="ensafeactionsapi" cols="150" rows="10"></textarea>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <input type="submit" name="submit" id="submit" value ="ENSAFE ACTIONS"></input>
+        </div>
+        <br>
+        <hr>
+    </form>
+    <br><br>
+
+</body>
+</html>

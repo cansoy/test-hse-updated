@@ -1,0 +1,18 @@
+<div class="icon-notifications" data-ensafe-notifications-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+    <img src="../../svg/notifications.svg" data-ensafe-notifications-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+</div>
+<% let countTotalNotification=0 %> 
+<div class="notifications-summary-info">
+    <% ensafeNotificationData.forEach(notification => { %>
+        <% if (data.VAR_ADI_SOYAD.split(" _")[0] == notification.nameSurname) { %>
+            <% countTotalNotification = notification.sonOfNotificationNumbers %>
+        <% } %>
+    <% }) %>
+
+    <% if (countTotalNotification>0) { %>
+        <div class="notifications-summary-info-totalnotifications" data-ensafe-notifications-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+            BİLDİRİM:<%= countTotalNotification %>
+         </div>
+    <% } %>
+    
+</div>

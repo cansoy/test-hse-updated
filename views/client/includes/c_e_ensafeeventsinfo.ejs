@@ -1,0 +1,23 @@
+<div class="icon-events" data-ensafe-events-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+    <img src="../../svg/events.svg" data-ensafe-events-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+</div>
+
+<% let counterEvents=0 %> 
+<% let writtenEnough=false %> 
+
+<div class="events-summary-info">
+    <% ensafeEventData.forEach(event => { %>
+        <% if (data.VAR_ADI_SOYAD.split(" _")[0] == event.nameSurname) { %>
+            <div class="events-summary-info-totalevents" data-ensafe-events-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+                <% if (!writtenEnough) { %>
+                    KAZA:<%= event.eventNotificationNumber %>
+                <% } %>
+                <% ++counterEvents %> 
+                <% if (counterEvents>0) { %>
+                    <% writtenEnough=true %> 
+                <% } %>
+             </div>
+        <% } %>
+    <% }) %>
+    
+</div>

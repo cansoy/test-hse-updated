@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/workordertable.css">
+    <title>İş Emri</title>
+</head>
+<body>
+
+    <div class="table-title">
+		<p>SAP TAMAMLANAN İŞ EMİRLERİ</p>
+	</div>
+	<% if (locals.workorder) { %>
+		<table class="table-fill">
+			<thead>
+				<tr>
+					<th class="text-left">-</th>
+					<th class="text-left">-</th>
+				</tr>
+			</thead>
+			<tbody class="table-hover">
+					<tr>
+						<td class="text-left">Ekip İsimleri</td>
+						<td class="text-left"><%= workorder.EkipIsimleri %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">İş Emri No</td>
+						<td class="text-left"><%= workorder.Siparis %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">İş Emri Türü</td>
+						<td class="text-left"><%= workorder.Tur %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Çalışma Türü</td>
+						<td class="text-left"><%= workorder.Arizab_t_ %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Arıza Alt Kodu</td>
+						<td class="text-left"><%= workorder.ArizaAltkodutanimi %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Arıza Neden Oluştu</td>
+						<td class="text-left"><%= workorder.Nedenmetni %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Yol Süresi</td>
+						<td class="text-left"><%= workorder.Yolsuresi %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Çalışma Süresi</td>
+						<td class="text-left"><%= workorder.Clsmasur_ %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Dönüş Süresi</td>
+						<td class="text-left"><%= workorder.Dns_suresi %> </td>
+					</tr>
+					
+					<tr>
+						<td class="text-left">Hareket Başlangıç</td>
+						<td class="text-left"><%= workorder.HareketBslTrhSaat %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Çalışma Bitiş</td>
+						<td class="text-left"><%= workorder.CalismaBitis %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Sonuç Kodu</td>
+						<td class="text-left"><%= workorder.IslemKodu %> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Yazılan Açıklama</td>
+						<td class="text-left"><%= workorder.Aciklama%> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Müşteri Bildirimi</td>
+						<td class="text-left"><%= workorder.BIldirimAciklmasi%> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Toplam Bildirim Sayısı</td>
+						<td class="text-left"><%= workorder.BIldirimSayisi%> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Tahmini Enerjilendirme Zamanı</td>
+						<td class="text-left"><%= workorder.KesongBi%> / <%= workorder.Kesintion%> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Geçek Enerjilendirme Zamanı</td>
+						<td class="text-left"><%= workorder.HHEnerjiTrh%> / <%= workorder.HHEnerjiSaat%> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Kullanılan Malzemeler</td>
+						<td class="text-left"><%= workorder.KullanilanMalzemeler%> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Kullanılan Malzeme Adetleri</td>
+						<td class="text-left"><%= workorder.KullanilanMalzemeAdetleri%> </td>
+					</tr>
+					<tr>
+						<td class="text-left">Kullanılan Malzeme Tutarları</td>
+						<td class="text-left"><%= workorder.KullanilanMalzemeTutarlari_TL_ %> </td>
+					</tr>
+			</tbody>
+		</table>
+	<% } %>
+
+	<% if (!locals.workorder) { %>
+	 <p> Hala SAP 'de veya Tablette Sipariş Tamamlanmadı </p>
+	<% } %>
+
+    
+</body>
+</html>

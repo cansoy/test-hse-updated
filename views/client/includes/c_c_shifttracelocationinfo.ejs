@@ -1,0 +1,122 @@
+<div class="location-details"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>"
+        >
+    <% if (data.HESAP_HEDEF_KONUMA_DURUM =="HEDEFE YAKINLAŞIYOR") { %>
+        <%= data.HESAP_HEDEF_KONUMA_DURUM%>
+        <img src="../../svg/gettingcloser.svg"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>"
+        >
+    <% } %>
+    <% if (data.HESAP_HEDEF_KONUMA_DURUM =="ŞUAN HEDEFTE") { %>
+        <%= data.HESAP_HEDEF_KONUMA_DURUM%>
+        <div class="fault-distance"><%= Math.floor(Math.random()*60+5) %> DK</div>
+        <img src="../../svg/nowworking.svg"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>
+        
+        ">
+    <% } %>
+    <% if (data.HESAP_HEDEF_KONUMA_DURUM =="ARAÇ KORDİNATI YOK") { %>
+        <%= data.HESAP_HEDEF_KONUMA_DURUM%>
+        <img src="../../svg/nolocationinfo.svg"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>">
+    <% } %>
+    <% if (data.HESAP_HEDEF_KONUMA_DURUM =="ARIZA KORDİNATI YOK") { %>
+        <%= data.HESAP_HEDEF_KONUMA_DURUM%>
+        <img src="../../svg/nolocationinfo.svg"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>">
+    <% } %>
+    <% if (data.HESAP_HEDEF_KONUMA_DURUM =="KORDİNATLAR YOK") { %>
+        <%= data.HESAP_HEDEF_KONUMA_DURUM%>
+        <img src="../../svg/nolocationinfo.svg"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>">
+    <% } %>
+    <% if (data.HESAP_HEDEF_KONUMA_DURUM =="_") { %>
+        <%= data.HESAP_HEDEF_KONUMA_DURUM%>
+        <img src="../../svg/nolocationinfo.svg"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>">
+    <% } %>
+    <% if (data.HESAP_HEDEF_KONUMA_DURUM =="UZAKLAŞIYOR !") { %>
+        <%= data.HESAP_HEDEF_KONUMA_DURUM%>
+        <img src="../../svg/gettingaway.svg"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>">
+    <% } %>
+    <% if (data.HESAP_HEDEF_KONUMA_DURUM.includes("ETMİYOR",1)) { %>
+        <%= data.HESAP_HEDEF_KONUMA_DURUM%>
+        <img src="../../svg/notmoving.svg"
+        data-worker-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>"
+        data-worker-id="<%= data.VAR_SICIL.trim()%>"
+        data-car-address="<%= data.MOBLZ_ARAC_ADRESI%>"
+        data-car-latitute="<%= data.MOBLZ_ARAC_ENLEM_2%>"
+        data-car-longtitute="<%= data.MOBLZ_ARAC_BOYLAM_2%>" 
+        data-workorder-address="<%= data.ZOMS004_ARIZA_ADRESI%>"
+        data-workorder-latitute="<%= data.NIHAI_ARIZA_ENLEMI_2%>"
+        data-workorder-longtitute="<%= data.NIHAI_ARIZA_BOYLAMI_2%>"
+        data-target-distance="<%= data.HESAP_KONUMA_UZAKLIK_MT_ %>">
+    <% } %>
+</div>
+
+ 

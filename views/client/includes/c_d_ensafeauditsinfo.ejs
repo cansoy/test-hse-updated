@@ -1,0 +1,21 @@
+<div class="icon-audits" data-ensafe-audits-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+    <img src="../../svg/audits.svg" data-ensafe-audits-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+</div>
+<div class="audits-summary-info">
+     <% uniqueEnsafeAuditData.forEach(audit => { %>
+        <% if (data.VAR_ADI_SOYAD.split(" _")[0]==audit.nameSurname) { %>
+            <div class="my-last-autid"> <span><%= Math.ceil(Math.random()*30+1)%></span>.<span><%= Math.ceil(Math.random()*30+1)%></span>.2023</div>
+            <div class="audits-summary-info-withactionaudits" data-ensafe-audits-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+                AK:<%= audit.sumOfActionAudit%> 
+            </div>
+            <div class="audits-summary-info-totalaudits" data-ensafe-audits-name="<%= data.VAR_ADI_SOYAD.split(" _")[0].trim()%>">
+               TOP:<%= audit.sumOfAudit %> 
+            </div>
+        <% } %> 
+     <% }) %>
+</div>
+
+
+
+
+
